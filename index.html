@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Grievance and Complaint System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="submitComplain.html">Report a Complaint</a></li>
+        <li><a href="#login" id="login-btn">Login</a></li>
+        <li><a href="#register" id="register-btn">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section id="home" class="section">
+    <h1>Welcome to the Digital Grievance and Complaint System</h1>
+    <p>Our platform allows you to report complaints easily to the respective departments, ensuring timely resolutions. We are committed to providing efficient and transparent services for the community.</p>
+    <!-- <a href="#complaint-form" class="action-btn">Report a Complaint</a> -->
+  </section>
+
+  
+
+<!-- Login Modal -->
+<div id="login" class="modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form id="login-form" onsubmit="loginUser(event)">
+        <div class="form-group">
+          <label for="username-login">Username:</label>
+          <input type="text" id="username-login" placeholder="Enter your username" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="password-login">Password:</label>
+          <input type="password" id="password-login" placeholder="Enter your password" required>
+        </div>
+  
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Login</button>
+          <button type="button" onclick="closeModal('login')" class="close-btn">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Register Modal -->
+  <div id="register" class="modal">
+    <div class="modal-content">
+      <h2>Register</h2>
+      <form id="register-form" onsubmit="registerUser(event)">
+        <div class="form-group">
+          <label for="username-register">Username:</label>
+          <input type="text" id="username-register" placeholder="Create a username" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="password-register">Password:</label>
+          <input type="password" id="password-register" placeholder="Create a password" required>
+        </div>
+  
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Register</button>
+          <button type="button" onclick="closeModal('register')" class="close-btn">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+ 
